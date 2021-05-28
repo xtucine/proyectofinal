@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700|Montserrat|Nunito+Sans:400,700,900");
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  &::selection {
+    background: rgba(200, 0, 0, 0.42);
+
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.title {
+  font-size: 2em;
+}
+a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: white;
+  &:link {
+    color: white;
+  }
+
+  &:visited {
+    color: white;
+  }
+
+  /*PONER EL RATON ENCIMA*/
+  &:hover {
+    color: rgba(247, 237, 237, 0.8);
+    text-shadow: 2px 0 0 black;
+  }
+}
+$main-color: #ec2416;
+$main-colorAdd: #4caf50;
+
+.card-container {
+  //z-index:1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media only screen and (min-width: 320px) {
+    flex-wrap: wrap;
+  }
+  /* AJUSTAR TAMAÑO*/
+  @media only screen and (min-width: 480px) {
+    flex-wrap: nowrap;
+  }
+
+  align-items: center;
+  width: 69%;
+  height: 75%;
+  border: 2px solid red;
+  box-shadow: 2px 5px 15px 1px #04060a;
+}
+.poster-container {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  //box-shadow: red 5px 5px 55px inset;
+  //box-shadow: 5px 0px 20px 0px #0e0c0c;
+  & .poster{
+      transform:scale(1);
+      object-fit:cover;
+
+      //box-shadow: rgba(0, 0, 0, 0.8) 5px 5px 55px inset;
+      //background-size: cover;
+      width:100%;
+    height:100%;
+  }
+}
+.poster {
+  //border: 2px solid green;
+  //-webkit-filter: contrast(120%);
+  //-webkit-filter: brightness(150%);
+  //-webkit-filter: saturate(2);
+  object-fit: cover;
+  //transform: scale(1.5);
+  //transform-origin: 70% 19%;
+  width: 100%;
+  height: 100%;
+}
+.card-description {
+  .description {
+    letter-spacing: 0.1em;
+  }
+  .logo-container {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    .logo {
+      background-size: cover;
+      background-position: 0% 50%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  letter-spacing: 0.3em;
+  background-color: rgba(0, 0, 0, 0.42);
+  padding: 3em;
+  line-height: 1.5em;
+  font-family: "Nunito Sans", sans-serif;
+  //font-weight: 700;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  p,
+  .rating,
+  .buttons {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+  }
+  p {
+    font-size: 0.85em;
+    letter-spacing: 2px;
+  }
+  .rating {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .span {
+    letter-spacing: 0.05em;
+    color: $main-color;
+    font-weight: 900;
+  }
+  label {
+    font-family: FontAwesome;
+    font-size: 1.4em;
+    color: #ffd700;
+    &:before {
+      content: "\f005";
+    }
+  }
+  .buttons {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    .button {
+      transition: 0.4s;
+      cursor: pointer;
+      padding-right: 1.2em;
+      padding-left: 1.2em;
+      padding: 1.6em;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
+      letter-spacing: initial;
+      border: 2px solid white;
+      //background:none;
+      color: white;
+      border-radius: 11px;
+      height: 40px;
+    }
+
+    .play {
+      border: none;
+      background: $main-color;
+      //width: 35%;
+      & .playMovie:after {
+        color: white;
+        padding-left: 0.4em;
+        font-family: FontAwesome;
+        font-size: 1.5em;
+
+        font-weight: lighter;
+        content: "\f04b";
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    //rogergcc
+    .add {
+      &:hover {
+        border: 2px solid $main-color;
+        color: $main-color;
+      }
+      width: 55%;
+      &:before {
+        font-family: FontAwesome;
+        font-size: 1.5em;
+        font-weight: lighter;
+        content: "\f067";
+      }
+    }
+  }
+}
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+body{
+  background-color: #000000;
+}
+/************
+//-----------------------------
+// PIE PÁGINA
+//-----------------------------
+************/
+#main-footer {
+	background: #4C4C4C;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
+}
+	#main-footer p {
+		margin: 0;
+	}
+
+	#main-footer a {
+		color: white;
+	}

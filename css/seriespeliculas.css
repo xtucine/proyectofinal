@@ -1,0 +1,242 @@
+
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+
+.cajafuera{
+	color: 	#000000;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+
+}
+
+
+
+
+	h1 {
+	 background: #333;
+	 color: #fff;
+	 text-align: center;
+	 margin: 0 0 5% 0;
+	 padding: 0.5em;
+	 margin: 0 0 5% 0;
+	}
+
+	.content {
+	 max-width: 900px;
+	 margin: 0 auto 3em auto;
+	 display: block;
+	}
+
+	ul {
+	 margin: 1em 0 0 0;
+	 padding: 0;
+		float:left;
+		width:100%;
+	  vertical-align: baseline;
+	}
+
+	ul li {
+	 background: #212121;
+	 list-style-type: none;
+	 margin: 1% 2%;
+	 padding: 0;
+	 float: left;
+	 width: 96%;
+	 box-sizing: border-box;
+	 font-size: 14px;
+	 color: #e6e6e6;
+	 border:5px solid #212121;
+	 clear: none;
+	 min-height: 1px;
+	 position: relative;
+	 display: block;
+	}
+
+	h2 {
+	 margin: 0.3em 0;
+	 font-weight: normal;
+	}
+
+	.thumbnail {
+	 float: left;
+	 margin-right: 1em;
+	 width: 33%;
+	}
+
+	.thumbnail img {
+	 width: 100%;
+	 float: left;
+	}
+
+	.caption p {
+	 padding: 0 0.5em;
+		color:#666;
+	}
+
+	.caption a {
+	 background: #e6e6e6;
+	 float: left;
+	 padding: 0.5em 0.2em 0.5em 1em;
+	 border-radius: 1px;
+	 color: #212121;
+	 text-decoration: none;
+	 font-weight: bold;
+	 display: block;
+	 transition:all 0.1s ease 0s;
+	}
+
+	.caption a:hover {
+	 background: #e62117;
+	 color:#fff;
+	}
+
+	.caption a:after {
+	 content: "►";
+	 color: transparent;
+	 transition: all 0.4s ease 0s;
+	}
+
+	.caption a:hover:after {
+	 font-size: 14px;
+	 transition: all 0.4s ease 0s;
+	 margin-left: 10px;
+	 margin-right: 0.5em;
+	 background: #fff;
+	 line-height: 14px;
+	 color: #e62117;
+	 height: 14px;
+	 padding: 0 5px 0 8px;
+	 border-radius: 2px;
+	}
+
+
+
+	input {
+	 display: none;
+	}
+
+	label[for="grid"] {
+	 margin-left: 1.1em;
+	}
+
+	input#grid + label::before,
+	input#grid + label::after {
+	 content: '☷ Grid';
+	 border-radius: 1px;
+	 display: inline-block;
+	 padding: 0.4em 0.6em;
+	 position: relative;
+	 top: 0;
+	 left: 0px;
+	 line-height: 18px;
+	 text-align: center;
+	 color: #fff;
+	 background: #bababa;
+	 margin-right: 0.5em;
+	 cursor: pointer;
+	 font-size: 14px;
+	}
+
+	input#grid + label::after {
+	 content: '☰ List';
+	 background: #212121; /*e62117;*/
+	 cursor: default;
+	}
+
+	input#grid:checked + label::after {
+	 background: #bababa;
+	 cursor: pointer;
+	}
+
+	input#grid:checked + label::before {
+	 background: #212121; /*e62117;*/
+	 cursor: default;
+	}
+
+
+	input#grid:checked + label + ul li {
+	 width: 30%;
+	 margin-right: 1.2%;
+	 display: inline-block;
+	}
+
+	input#grid:checked + label + ul li .thumbnail {
+	 width: 100%;
+	 margin-bottom: 1em;
+	}
+
+	input#grid:checked + label + ul li .caption {
+	 padding: 0.5em;
+	}
+	input#grid:checked + label + ul li .caption p {
+	 padding: 0;
+	}
+
+	input#grid:checked + label + ul li .caption a {
+	 margin-bottom: 0.5em;
+	}
+
+
+
+	input#grid:checked + label + ul li:nth-of-type(3n+1) {
+	    clear: left;
+	}
